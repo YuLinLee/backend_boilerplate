@@ -1,0 +1,23 @@
+//yarn add --dev eslint prettier eslint-config-airbnb eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y
+{
+	"extends": ["airbnb", "prettier", "prettier/react", "eslint:recommended"],
+	"plugins": ["prettier"],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaVersion": 2016,
+		"sourceType": "module"
+	},
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true
+	},
+	"rules": {
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		//Fix: Error - Unexpected console statement. (no-console)
+		"no-console": "off",
+		//Fix: Definition for rule 'jsx-a11y/href-no-hash' was not found jsx-a11y/href-no-hash
+		"jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }]
+	}
+}

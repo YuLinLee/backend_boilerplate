@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "nodemon -e html,js --watch src --exec babel-node -- src/index.js",
-    "eslint": "./node_modules/eslint/bin/eslint.js src"
+    "eslint": "eslint src",
+    "test": "jest src"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -26,7 +27,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.2.0",
     "eslint-plugin-react": "^7.3.0",
+    "jest": "^21.1.0",
     "nodemon": "^1.12.0",
-    "prettier": "^1.7.0"
+    "prettier": "^1.7.0",
+    "supertest": "^3.0.0"
   }
 }

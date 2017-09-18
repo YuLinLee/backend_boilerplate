@@ -14,12 +14,14 @@
   "scripts": {
     "start": "nodemon -e html,js --watch src --exec babel-node -- src/index.js",
     "eslint": "eslint src",
-    "test": "jest src"
+    "test": "jest src",
+    "test:coverage": "yarn run test -- --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.0",
     "babel-preset-env": "^1.6.0",
+    "coveralls": "^2.13.1",
     "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.4.0",
